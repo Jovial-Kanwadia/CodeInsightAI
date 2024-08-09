@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "target": "es5",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "allowJs": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "declaration": false,
+      "outDir": "dist",
+      "rootDir": "src",
+      "lib": [
+        "es7",
+        "dom"
+      ]
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  
+/*
+==================CompilerOptions==============
+The compilerOptions property is an object that specifies various settings and options for the TypeScript compiler. Here are the options provided:
+
+module: This option specifies the module system that the compiler should use. The value "NodeNext" indicates that the compiler should use the Node.js ESM (ECMAScript Modules) module resolution strategy. This is useful for projects that are intended to be used with Node.js and want to leverage ES module features.
+
+moduleResolution: This option determines how module imports are resolved. The value "Node" means that the compiler will use Node.js-style module resolution. This is typically used when working in a Node.js environment, where modules are resolved based on the CommonJS module system.
+
+baseUrl: This option sets the base directory for resolving non-absolute module names. By setting "baseUrl": "src", you tell the compiler to start looking for modules in the src directory. This is useful for simplifying import paths in your project.
+
+outDir: This option specifies the directory where the compiled JavaScript files should be output. The value "dist" means that all compiled files will be placed in the dist directory. This helps keep the source code and compiled code separate.
+
+sourceMap: This boolean option indicates whether source maps should be generated. By setting "sourceMap": true, the compiler will generate source maps for the compiled JavaScript files. Source maps are useful for debugging, as they map the compiled code back to the original TypeScript source code.
+
+noImplicitAny: This boolean option, when set to true, means that the compiler will raise an error when it encounters variables or expressions whose type cannot be determined (i.e., they implicitly have the any type). This helps catch potential bugs and enforces more explicit type definitions.
+
+include
+The include property specifies an array of file patterns that should be included in the compilation. The pattern means that all files within the src directory and its subdirectories should be included. The syntax is a glob pattern that matches any file within the specified directory and its subdirectories.
+
+*/
